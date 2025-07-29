@@ -1,9 +1,13 @@
 import os, time, re
 from typing import Optional
+from dotenv import load_dotenv
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
 from azure.ai.agents import AgentsClient
 from azure.ai.agents.models import DeepResearchTool, MessageRole, ThreadMessage
+
+# Load environment variables from .env file if they're not already set
+load_dotenv()
 
 
 def convert_citations_to_superscript(markdown_content):

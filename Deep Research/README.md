@@ -6,6 +6,23 @@ The samples in the online documentation and here use the [Azure AI Foundry Agent
 1. Start with the [deep research tool overview](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/tools/deep-research) and set up steps. 
 2. Then use the [deep research quickstart Python SDK sample](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/tools/deep-research-samples) to get your first code sample running.
 
+## Environment Setup
+The code now supports loading environment variables from a `.env` file using python-dotenv. You have two options for setting up your environment variables:
+
+### Option 1: Environment Variables (Original method)
+Set the following environment variables in your system:
+- `PROJECT_ENDPOINT`: Your Azure AI Project endpoint URL
+- `BING_RESOURCE_NAME`: Name of your Bing search resource
+- `DEEP_RESEARCH_MODEL_DEPLOYMENT_NAME`: Name of your deep research model deployment
+- `MODEL_DEPLOYMENT_NAME`: Name of your main model deployment
+
+### Option 2: .env File (New method)
+1. Copy `.env.template` to `.env` in the Deep Research directory
+2. Fill in your actual values in the `.env` file
+3. The application will automatically load these values if environment variables are not already set
+
+**Note**: Environment variables take precedence over `.env` file values, so if you have both set, the environment variables will be used.
+
 ## Enhanced code sample
 The code sample in this folder improves on the quickstart sample with these enhancements:
 
