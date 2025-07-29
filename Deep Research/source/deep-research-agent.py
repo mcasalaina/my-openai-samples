@@ -140,10 +140,13 @@ def create_research_summary(
 if __name__ == "__main__":
     project_client = AIProjectClient(
         endpoint=os.environ["PROJECT_ENDPOINT"],
+        subscription_id=os.environ["AZURE_SUBSCRIPTION_ID"],
+        resource_group_name=os.environ["AZURE_RESOURCE_GROUP_NAME"],
+        project_name=os.environ["AZURE_PROJECT_NAME"],
         credential=DefaultAzureCredential(),
     )
 
-    conn_id = project_client.connections.get(name=os.environ["BING_RESOURCE_NAME"]).id
+    conn_id = project_client.connections.get(connection_name=os.environ["BING_RESOURCE_NAME"]).id
 
     # Initialize a Deep Research tool with Bing Connection ID and Deep Research model deployment name
     deep_research_tool = DeepResearchTool(

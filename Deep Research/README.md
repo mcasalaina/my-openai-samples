@@ -12,6 +12,9 @@ The code now supports loading environment variables from a `.env` file using pyt
 ### Option 1: Environment Variables (Original method)
 Set the following environment variables in your system:
 - `PROJECT_ENDPOINT`: Your Azure AI Project endpoint URL
+- `AZURE_SUBSCRIPTION_ID`: Your Azure subscription ID
+- `AZURE_RESOURCE_GROUP_NAME`: Name of your Azure resource group
+- `AZURE_PROJECT_NAME`: Name of your Azure AI project
 - `BING_RESOURCE_NAME`: Name of your Bing search resource
 - `DEEP_RESEARCH_MODEL_DEPLOYMENT_NAME`: Name of your deep research model deployment
 - `MODEL_DEPLOYMENT_NAME`: Name of your main model deployment

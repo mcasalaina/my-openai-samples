@@ -6,6 +6,28 @@ I will mostly be using the common OpenAI Python SDK that supports both Azure Ope
 
 For the service endpoint and credentials, I will use Azure OpenAI service and credentials for the most part because it's personally convenient. Regardless, the features and samples are applicable to both services.
 
+# Setup
+
+## Python Environment
+This repository requires Python 3.8 or higher. To set up the environment:
+
+### Option 1: Install core dependencies only
+```bash
+pip install -r requirements.txt
+```
+
+### Option 2: Install exact versions (reproducible environment)
+```bash
+pip install -r requirements-lock.txt
+```
+
+## Environment Variables
+Most samples require environment variables for API keys and endpoints. You can either:
+1. Set them in your system environment
+2. Create `.env` files in the respective sample directories (recommended)
+
+See individual sample directories for specific configuration requirements.
+
 
 # List
 
